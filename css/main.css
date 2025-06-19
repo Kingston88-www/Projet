@@ -1,0 +1,76 @@
+header {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(79, 105, 105);
+}
+
+.logo {
+    color: rgb(168, 165, 165);
+}
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.navbar ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    color : black;
+
+}
+.navbar ul a {
+        background-color: rgb(212, 199, 199);
+}
+.hero h1 {
+    color: blueviolet;
+
+}
+.hero h1:hover {
+    transform: translateY(-5px);
+    transition: 0.3;
+}
+
+.hero .btn {
+    background-color: green ;
+    box-shadow: 10px;
+    border: 5px;
+    border-radius: 5px;
+}
+
+.highlights {
+    margin: 50px 50px ;
+    display: flex;
+    gap: 20px;
+    border: 5cap;
+     
+}
+
+.highlights .card {
+    border-radius: 10px;
+    background-color: rgb(79, 105, 105);
+    border : 10px;
+    border-color: blue;
+
+}
+
+
+.highlights img {
+     width: 300px;
+     height: auto;
+     border-radius: 10px;
+}
+.highlights img:hover{
+    transform: translateY(-5px);
+    transition: 0.3;
+}
+footer {
+    background-color: rgb(79, 105, 105);
+    height: 50px;
+    margin-top: 0px;
+}
+footer p{
+    color: black;
+    text-align: center;
+    height: 30px;
+}
