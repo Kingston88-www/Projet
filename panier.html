@@ -1,21 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EKbusiness</title>
-    <link rel="stylesheet" href="panier.css">
+    <link rel="stylesheet" href="css/panier.css">
 </head>
+
 <body>
     <header>
-        <div class="article">
-            <img src="img/jordan 1.JPG" alt="">
-            <h3 class="name">JORDAN 1</h3>
-            <p class="description"></p>
-            <p class="prix">25$</p>
-        </div>
-        <button type="submit" data-img="" data-name="" data-Id="id" data-description="">Ajouter au panier</button>
+        <!-- Ajoute ici un logo ou un titre si besoin -->
     </header>
+    <div class="article">
+        <div class="panier">
+            <img src="img/jordan 1.JPG" alt="Jordan 1">
+            <h3 class="name">JORDAN 1</h3>
+            <p class="description">
+                Sneakers emblématiques, confortables et stylées, parfaites pour toutes les occasions.
+            </p>
+            <p class="prix">25&nbsp;$</p>
+            <button type="submit" data-img="img/jordan 1.JPG" data-name="JORDAN 1" data-Id="id" data-description="Sneakers emblématiques, confortables et stylées, parfaites pour toutes les occasions.">
+                Passer la commande
+            </button>
+        </div>
+    </div>
+    <script>
+        // filepath: c:\Users\HP\Desktop\projet\panier.html
+        document.addEventListener('DOMContentLoaded', function() {
+            const panierDiv = document.querySelector('.article');
+            panierDiv.innerHTML = ''; // Vide le contenu initial
 
+            let panier = JSON.parse(localStorage.getItem('panier')) || [];
+
+            if (panier.length === 0) {
+                panierDiv.innerHTML = '<p style="text-align:center;font-size:1.2rem;color:#888;">Votre panier est vide.</p>';
+                return;
+            }
+
+            panier.forEach((product, idx) => {
+                const prod = document.createElement('div');
+                prod.className = 'panier';
+                prod.innerHTML = `
+            <img src="${product.img}" alt="${product.name}">
+            <h3 class="name">${product.name}</h3>
+            <p class="description">${product.description}</p>
+            <p class="prix">${product.prix}</p>
+            <button class="remove-btn" data-index="${idx}">Retirer</button>
+        `;
+                panierDiv.appendChild(prod);
+            });
+
+            // Gestion du retrait d'un produit
+            document.querySelectorAll('.remove-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    let index = parseInt(this.getAttribute('data-index'));
+                    panier.splice(index, 1);
+                    localStorage.setItem('panier', JSON.stringify(panier));
+                    location.reload();
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>
