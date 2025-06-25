@@ -7,6 +7,7 @@ body {
 
 .article {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
@@ -19,7 +20,7 @@ body {
     padding: 32px 24px;
     margin: 16px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     max-width: 320px;
     transition: box-shadow 0.2s;

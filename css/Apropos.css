@@ -15,20 +15,20 @@ header {
 }
 
 .logo img {
-    height: 48px;
+    height: 100px;
     margin-left: 32px;
-    border-radius: 8px;
+    border-radius: 18px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .title-container {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 15px;
 }
 
 .title h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #1a8917;
     margin: 0 24px 0 0;
     letter-spacing: 1px;
@@ -44,7 +44,7 @@ header {
 
 .title-container ul a {
     text-decoration: none;
-    color: #222;
+    color: #111111;
     font-weight: 500;
     font-size: 1.1rem;
     padding: 8px 16px;
@@ -54,8 +54,8 @@ header {
 
 .title-container ul a:hover,
 .title-container ul a:focus {
-    background: #1a8917;
-    color: #fff;
+    background: #2fb92a;
+    color: #fcf9f9;
 }
 
 main {
@@ -64,7 +64,7 @@ main {
 
 .section-block {
     background: #fff;
-    border-radius: 18px;
+    border-radius: 55px;
     box-shadow: 0 4px 24px rgba(0,0,0,0.08);
     margin: 32px auto;
     max-width: 700px;
@@ -73,6 +73,7 @@ main {
     overflow: hidden;
     animation: fadeInUp 1s cubic-bezier(.23,1.01,.32,1) both;
     transition: box-shadow 0.3s, transform 0.3s;
+    margin-bottom: 24px;
 }
 
 .section-block:not(:first-child) {
@@ -170,4 +171,8 @@ footer {
     .title h1 {
         font-size: 1.3rem;
     }
+}
+
+.section-block:last-child {
+    margin-bottom: 0;
 }
