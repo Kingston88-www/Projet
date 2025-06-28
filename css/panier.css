@@ -61,17 +61,27 @@ body {
     margin-bottom: 18px;
 }
 
-.panier button {
+.panier button remove-btn {
     background: #1a8917;
     color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 10px 24px;
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.2s;
+
 }
 
 .panier button:hover {
     background: #166d13;
+}
+
+.commande {
+    font-size: 0.5rem;
+    color: rgb(138, 138, 141);
+    cursor: pointer;
+    font-size: 20px;
+    border: 55px;
+    border-radius: 50px;
 }
